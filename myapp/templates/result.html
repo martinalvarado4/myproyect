@@ -1,0 +1,42 @@
+SEARCH RESULT
+<table style="width:100%">
+  <tr>
+    <th>Type</th>
+    <th>Result</th>
+  </tr>
+  <tr>
+    <td>People</td>
+    <td>
+    {% for key,valor in query.people_res.items %}
+      <a href= "../characters/{{valor}}" >{{key }}</a>
+    {% endfor %}
+    </td>
+  </tr>
+  <tr>
+    <td>Starships</td>
+    <td>
+    {% for key,valor in query.starships.results %}
+      <a href= "../starships/{{valor}}" >{{key }}</a>
+    {% endfor %}
+    </td>
+  </tr>
+  <tr>
+    <td>Planets</td>
+    <td>
+    {% for key,valor in query.planets.results %}
+      <a href= "../planets/{{valor}}" >{{key }}</a>
+    {% endfor %}
+    </td>
+  </tr>
+  <tr>
+    <td>Films</td>
+    <td>
+    {% for key,valor in query.films.results %}
+      <a href= "../films/{{valor}}" >{{key}}</a>
+    {% endfor %}
+    </td>
+  </tr>
+</table>
+<form action="../">
+   <button type="submit">INICIO</button>
+</form>

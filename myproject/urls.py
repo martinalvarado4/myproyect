@@ -23,5 +23,8 @@ urlpatterns = [
     path('movies', views.index, name='index'),
     path('movies/<int:movie>', views.movie, name='movie'),
     path('characters/<int:character>', views.character, name='character'),
+    path('planets/<int:planet>', views.planet, name='planet'),
+    path('starships/<int:starship>', views.starship, name='starship'),
+    path('result/', views.result, name='result'),
     path('admin/', admin.site.urls)
 ]

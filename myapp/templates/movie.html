@@ -5,7 +5,21 @@
     {% for key2,value2 in movie.characters.items %}
       <a href= "../characters/{{value2}}" >{{key2}}</a>
     {% endfor %}
+  {% elif key == "planets" %}
+    <p> {{key}}</p>
+    {% for key2,value2 in movie.planets.items %}
+      <a href= "../planets/{{value2}}" >{{key2}}</a>
+    {% endfor %}
+  {% elif key == "starships" %}
+    <p> {{key}}</p>
+    {% for key2,value2 in movie.starships.items %}
+      <a href= "../starships/{{value2}}" >{{key2}}</a>
+    {% endfor %}
   {% else %}
     <p>{{key}}:{{value}} </p>
   {% endif %}
 {% endfor %}
+
+<form action="../">
+   <button type="submit">INICIO</button>
+</form>
