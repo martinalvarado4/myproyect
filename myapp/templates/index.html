@@ -1,0 +1,19 @@
+<h1>All SW Films</h1>
+<table style="width:100%">
+  <tr>
+    <th>Nombre</th>
+    <th>Año lanzamiento</th>
+    <th>Director</th>
+    <th>Productor</th>
+    <th>N° Episodio</th>
+  </tr>
+  {% for pelicula in peliculas %}
+    <tr>
+      <td><a href= "movies/{{pelicula.id}}" >{{pelicula.title}}</a></td>
+      <td>{{pelicula.release_date}}</td>
+      <td>{{pelicula.director}}</td>
+      <td>{{pelicula.producer}}</td>
+      <td>{{pelicula.episode_id}}</td>
+    </tr>
+  {% endfor %}
+</table>

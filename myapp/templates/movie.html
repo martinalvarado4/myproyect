@@ -1,0 +1,11 @@
+<h1> {{movie.title}}</h1>
+{% for key,value in movie.items %}
+  {% if key == "characters" %}
+    <p> {{key}}</p>
+    {% for key2,value2 in movie.characters.items %}
+      <a href= "../characters/{{value2}}" >{{key2}}</a>
+    {% endfor %}
+  {% else %}
+    <p>{{key}}:{{value}} </p>
+  {% endif %}
+{% endfor %}
